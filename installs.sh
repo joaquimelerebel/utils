@@ -7,11 +7,12 @@ set +x
 
 #MacBook Pro keyboard
 cat keyboard >> /etc/default/keyboard
+echo "KEYBOARD DONE"
 
 #wifi
 mkdir /lib/firmware/brcm/
 wget https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git/plain/brcm/brcmfmac43602-pcie.bin /lib/firmware/brcm/
-
+echo "wifi DONE"
 
 #zsh
 $APT_INSTALL zsh
@@ -30,14 +31,14 @@ sed -i s/robbyrussell/aussiegeek/g /root/.zshrc
 
 sed s+/root/.oh-my-zsh+/home/$USER/.oh-my-zsh+g /home/$USER/.zshrc
 
-
+echo "ZSH DONE"
 #terminator
 $APT_INSTALL terminator
 mkdir -p $HOME/.config/terminator/plugins
 wget https://git.io/v5Zww -O "/home/$USER/.config/terminator/plugins/terminator-themes.py"
 cat terminator-config > "/home/$USER/.config/terminator/config"
 
-
+echo "Terminator DONE"
 
 #sublime text
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
