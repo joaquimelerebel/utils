@@ -1,0 +1,48 @@
+[global_config]
+  tab_position = left
+  title_transmit_bg_color = "#729fcf"
+  enabled_plugins = LaunchpadBugURLHandler, LaunchpadCodeURLHandler, APTURLHandler, TerminatorThemes
+[keybindings]
+  split_horiz = <Primary>parenright
+  split_vert = <Primary>parenleft
+[profiles]
+  [[default]]
+    background_darkness = 0.89
+    background_type = transparent
+    cursor_color = "#729fcf"
+    font = Hack 10
+    use_system_font = False
+  [[Solarized Dark]]
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Hack 10
+    use_system_font = False
+  [[Dracula]]
+    background_color = "#1e1f29"
+    background_darkness = 0.89
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = Hack 10
+    foreground_color = "#f8f8f2"
+    palette = "#44475a:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#94a3a5:#000000:#ff5555:#50fa7b:#f1fa8c:#8be9fd:#bd93f9:#ff79c6:#ffffff"
+    use_system_font = False
+[layouts]
+  [[default]]
+    [[[child0]]]
+      type = Window
+      parent = ""
+      order = 0
+      position = 960:0
+      maximised = False
+      fullscreen = False
+      size = 956, 1051
+      title = ulysse@mac:~/Documents
+      last_active_term = 23f0f8f2-ba4d-4a8d-8996-2b9af62a20dc
+      last_active_window = True
+    [[[terminal1]]]
+      type = Terminal
+      parent = child0
+      order = 0
+      profile = Dracula
+      uuid = 23f0f8f2-ba4d-4a8d-8996-2b9af62a20dc
+[plugins]
