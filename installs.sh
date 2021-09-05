@@ -67,8 +67,3 @@ $APT_INSTALL nmap wireshark jhon aircrack-ng
 $APT_INSTALL binwalk radare2
 #	web
 $APT_INSTALL dirb
-
-#eclipse 
-cd /home/$USER/Downloads
-wget https://www.eclipse.org/downloads/download.php?file=/oomph/epp/2020-09/R/eclipse-inst-jre-linux64.tar.gz&mirror_id=1099
-
