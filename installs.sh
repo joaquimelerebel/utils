@@ -25,8 +25,6 @@ else
 	#zsh
 	$APT_INSTALL zsh
 	sh -c "$(wget -qO- https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-	# cp .zshrc /home/$USER/
-	# sudo cp .zshrc /root
 
 	#change default shell
 	chsh -s $(which zsh)
@@ -37,9 +35,12 @@ else
 	sed -i s/robbyrussell/agnoster/g /home/$USER/.zshrc
 	sed -i s/robbyrussell/aussiegeek/g /root/.zshrc
 
+	cp -r /root/.oh-my-zsh /home/$USER/ 
+	chown -R $USER:$USER /home/$USER/.oh-my-zsh
 	sed s+/root/.oh-my-zsh+/home/$USER/.oh-my-zsh+g /home/$USER/.zshrc
 
 	echo "ZSH DONE"
+
 	#terminator
 	$APT_INSTALL terminator
 	mkdir -p $HOME/.config/terminator/plugins
